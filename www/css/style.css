@@ -1,0 +1,63 @@
+/* #myFilter {
+  width:200px !important;
+  max-width:600px !important;
+} */
+
+#myFooter {
+  text-align:right !important;
+  background:linear-gradient(to right,white,greenyellow) !important;
+}
+
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* TEST4.PHP */
+/* #repeater, #repeater-header {
+  display: flex;
+  width: 100%;
+}
+#repeater-header {
+  font-weight: bold;
+}
+#repeater span, #repeater-header span {
+  text-align: center;
+  width: 50px;
+}
+#repeater .x-titolo, #repeater-header .x-titolo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:100%;
+    width:100%;
+}
+#repeater .x-id, #repeater-header .x-id {
+  text-align: right;
+  min-width: 50px;
+  padding-right: 5px;
+}
+#repeater .x-formato, #repeater-header .x-formato {
+  width: 65px;
+}
+#repeater .x-dove, #repeater-header .x-dove {
+  min-width: 50px;
+} */
