@@ -8,7 +8,12 @@ app.controller("VideogameCtrl", function($scope,$http){
   $scope.videogames;
   $scope.op = "R";
 
-  $http.get("iVideogame.php?op=R")
+  $api_online = "iVideogame.php?op=R";
+  $api_offline = "https://rjko.altervista.org/videogame/www/iVideogame.php?op=R";
+  // DEV ENV
+  $api = $api_offline;
+
+  $http.get(`${$api}`)
   .then(function mySuccess(response) {
         $scope.vgJson = response.data;
     }, function myError(response) {
