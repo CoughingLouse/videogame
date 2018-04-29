@@ -24,6 +24,7 @@
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
       <input id="myFilter" ng-model="input" class="w3-bar-item w3-input w3-round w3-animate-input" type="text"
         placeholder="Filtra per TITOLO, FRMT o DV" style="width:70px;max-width:70%;"/>
+      <button class="w3-button w3-red w3-round-large" style="margin-left: 10px">ADD</button>
     </div>
 
   </div>

@@ -2,21 +2,22 @@ var app = angular.module("VideogameApp", []);
 app.controller("VideogameCtrl", function($scope,$http){
 
   $scope.title = "Videogame <AngularJS>";
-  $scope.input = "";
+  $scope.error;
   $scope.vgJson;
-  $scope.error = "";
-  $scope.videogames;
-  $scope.op = "R";
+  $scope.mock = `[
+  {"ID":1,"TITOLO":"MOTORSTORM ARCTIC EDGE","FORMATO":"PSP","SPECIALE":0,"DOVE":""},
+  {"ID":1,"TITOLO":"MOTORSTORM ARCTIC EDGE","FORMATO":"PSP","SPECIALE":0,"DOVE":""},
+  {"ID":1,"TITOLO":"MOTORSTORM ARCTIC EDGE","FORMATO":"PSP","SPECIALE":0,"DOVE":""},
+  {"ID":1,"TITOLO":"MOTORSTORM ARCTIC EDGE","FORMATO":"PSP","SPECIALE":0,"DOVE":""},
+  {"ID":1,"TITOLO":"MOTORSTORM ARCTIC EDGE","FORMATO":"PSP","SPECIALE":0,"DOVE":""}]`;
 
-  $api_online = "iVideogame.php?op=R";
-  $api_offline = "https://rjko.altervista.org/videogame/www/iVideogame.php?op=R";
-  // DEV ENV
-  $api = $api_offline;
+  $api = ["../iVideogame.php?op=R", "https://rjko.altervista.org/videogame/iVideogame.php?op=R"];
 
-  $http.get(`${$api}`)
+  $http.get($api[0])
   .then(function mySuccess(response) {
         $scope.vgJson = response.data;
     }, function myError(response) {
+        $scope.vgJson = $scope.mock;
         $scope.error = response.statusText;
         console.log("Error: " + $scope.error);
     });
